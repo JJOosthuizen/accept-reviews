@@ -2,7 +2,7 @@
 
 # Define the module and status to look for
 module="$1"
-status="Assigned"
+#status="Assigned"
 status="Invited"
 
 folder_path="/home/wtc/student_work/reviews/java-reviews/$module"
@@ -54,5 +54,5 @@ done <<< "$reviews"
 # prints out all 3 students usernames and project locations
 printf "\n\nFinished accepting all 3 reviews.\nStudents that you are reviewing:\n"
 for name in "${names[@]}"; do
-  printf "* ${name}\nReview of submission can be found at:\n~/student_work/reviews/java-reviews/$module/$name\n"
+  printf "* ${name}\nReview of submission can be found at:\n~${folder_path}/${name}\n"
 done
